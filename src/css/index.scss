@@ -1,0 +1,142 @@
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+html{
+  font-size: 20px;
+
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrap{
+  max-width: 880px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.btn{
+  padding: 8px 30px;
+  border-radius: 20px;
+  border: none;
+}
+header{
+  color: #fff;
+  background:
+          url("../img/Shapes-header.svg") 0 -40px no-repeat,
+          url("../img/Curves.svg") 0 100% no-repeat,
+          url("../img/Down Arrow.svg") 50% 96% no-repeat,
+          url("../img/Icon_people.svg") 96% 37% no-repeat,
+          url("../img/Bg_header.png") 0 -50px no-repeat;
+
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 0 0;
+  &__logo{
+    background-image: url("../img/logo.svg");
+    background-repeat: no-repeat;
+    padding: 5px 0 17px 66px;
+    a{
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      letter-spacing: -0.349794px;
+    }
+  }
+  &__list{
+    padding: 5px 0 0 0;
+    list-style-type: none;
+    display: flex;
+    text-align: center;
+    margin: 0;
+    &-item{
+      padding: 0 0 0 36px;
+    }
+    a{
+      font-weight: 600;
+      font-size: 0.75rem;
+      line-height: 1.2rem;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+    .active{
+      a{
+        opacity: unset;
+      }
+    }
+    &-btn{
+      margin-top: -5px;
+      font-weight: 600;
+      font-size: 0.75rem;
+      line-height: 1.2rem;
+      /* identical to box height, or 160% */
+      text-align: center;
+      text-transform: uppercase;
+      a{
+        color: #250F8A;
+      }
+    }
+  }
+  &__authorization{
+    &>.navbar__list{
+      a{
+        opacity: unset;
+      }
+    }
+  }
+}
+.header{
+  padding: 100px 0 300px 0;
+  &__content{
+    //display: block;
+    text-align: left;
+    max-width: 550px;
+  }
+  &__title{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.25rem;
+    line-height: 3rem;
+  }
+  &__btn{
+    margin-top: 40px;
+    padding: 10px 35px;
+    background: #FFCA00;
+    box-shadow: 0 20px 30px rgba(37, 15, 138, 0.2);
+    a{
+      font-style: normal;
+      font-weight: 600;
+      font-size: 0.75rem;
+      line-height: 1.2rem;
+      text-align: center;
+      text-transform: uppercase;
+      color: #250F8A;
+    }
+  }
+}
+.slick-track{
+  margin: 0;
+}
