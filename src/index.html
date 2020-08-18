@@ -17,22 +17,26 @@
 <header>
     <div class="wrap">
         <nav class="navbar">
+            <a href="" class="menu-triger"><i class="fas fa-bars"></i></a>
             <div class="navbar__logo">
                 <a href="">MartaUP</a>
             </div>
-            <ul class="navbar__list">
-                <li class="navbar__list-item active"><a href="">Home</a></li>
-                <li class="navbar__list-item"><a href="">Work</a></li>
-                <li class="navbar__list-item"><a href="">About</a></li>
-                <li class="navbar__list-item"><a href="">Contact</a></li>
-            </ul>
-            <div class="navbar__authorization">
+            <div class="menu-popup">
+                <a href="" class="menu-close"><i class="far fa-times-circle"></i></a>
                 <ul class="navbar__list">
-                    <li class="navbar__list-item"><a href="#">Login</a></li>
-                    <li class="navbar__list-item">
-                        <button class="btn navbar__list-btn"><a href="#">Sign Up</a></button>
-                    </li>
+                    <li class="navbar__list-item active"><a href="#">Home</a></li>
+                    <li class="navbar__list-item"><a href="#">Work</a></li>
+                    <li class="navbar__list-item"><a href="#">About</a></li>
+                    <li class="navbar__list-item"><a href="#">Contact</a></li>
                 </ul>
+                <div class="navbar__authorization">
+                    <ul class="navbar__list">
+                        <li class="navbar__list-item"><a href="#">Login</a></li>
+                        <li class="navbar__list-item">
+                            <button class="btn navbar__list-btn"><a href="#" class="myLinkModal">Sign Up</a></button>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <div class="header">
@@ -123,7 +127,7 @@
                 </div>
             </div>
         </div>
-        <div class="about__item">
+        <div class="about__item about__item_reverse-md">
             <div class="about__item-content">
                 <h3 class="about__item-title">Idea Generation &
                     Foundation</h3>
@@ -212,20 +216,41 @@
     </div>
 </section>
 
-<footer  class="page ">
+<footer class="page ">
     <div class="wrap">
         <div class="footer">
             <ul class="footer-list">
-                <li class="footer-list__item">About Martaup</li>
-                <li class="footer-list__item">Help</li>
-                <li class="footer-list__item">Privacy Policy</li>
+                <li class="footer-list__item"><a href="#">About Martaup</a></li>
+                <li class="footer-list__item"><a href="#">Help</a></li>
+                <li class="footer-list__item"><a href="#">Privacy Policy</a></li>
             </ul>
             <p class="footer__company">
-                © 2013-2018 All rights reserved.
+                © 2020 All rights reserved.
             </p>
         </div>
     </div>
 </footer>
+
+<div id="myModal">
+    <form action="#" class="sing-up">
+        <div class="modal__group">
+            <label class="modal__label" for="sign-up-email">Email
+            </label>
+            <input id="sign-up-email" class="modal__input" type="email" placeholder="example@google.com">
+        </div>
+        <div class="modal__group">
+            <label  class="modal__label" for="sign-up-password">Password </label>
+            <input id="sign-up-password" class="modal__input"  type="password" placeholder="*********">
+        </div>
+        <div class="modal__group">
+            <label  class="modal__label" for="sign-up-password2">Repeated Password </label>
+            <input id="sign-up-password2" class="modal__input"  type="password" placeholder="*********">
+        </div>
+        <button class="btn modal__btn">Register</button>
+    </form>
+    <span id="myModal__close" class="close">ₓ</span>
+</div>
+<div id="myOverlay"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script src="js/main.js"></script>

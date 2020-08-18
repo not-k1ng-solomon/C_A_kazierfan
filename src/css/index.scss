@@ -39,18 +39,36 @@ a {
   padding: 8px 30px;
   border-radius: 20px;
   border: none;
+  &:focus{
+    outline: none;
+  }
 }
-
+input{
+  &:focus{
+    outline: none;
+  }
+}
 header {
   color: #fff;
   background: url("../img/Shapes-header.svg") 0 -40px no-repeat,
-    url("../img/Curves.svg") 0 100% no-repeat,
-    url("../img/Down Arrow.svg") 50% 96% no-repeat,
-    url("../img/Icon_people.svg") 96% 37% no-repeat,
-    url("../img/Bg_header.png") 0 -50px no-repeat;
+  url("../img/Curves.svg") 0 100% no-repeat,
+  url("../img/Down Arrow.svg") 50% 96% no-repeat,
+  url("../img/Icon_people.svg") 96% 37% no-repeat,
+  url("../img/Bg_header.png") 0 -50px no-repeat;
   @media (min-width: 1400px) {
     background: url("../img/Icon_people.svg") 80% 37% no-repeat;
     background-color: #118CC5;
+  }
+  @media (max-width: 900px) {
+    background: url("../img/Shapes-header.svg") 0 -40px no-repeat,
+    url("../img/Curves.svg") 0 100% no-repeat,
+    url("../img/Icon_people.svg") 400px 37% no-repeat,
+    url("../img/Bg_header.png") 0 -50px no-repeat;
+  }
+  @media (max-width: 500px) {
+    background: url("../img/Shapes-header.svg") 0 -40px no-repeat,
+    url("../img/Curves.svg") 0 100% no-repeat,
+    url("../img/Bg_header.png") 0 0 no-repeat;
   }
 }
 
@@ -58,7 +76,23 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 20px 0 0 0;
+  @media (max-width: 750px) {
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    background-color: #2D2193;
+    z-index: 999;
+    margin-left: -15px;
+    padding-left: 15px;
+  }
+  .menu-popup{
+    display: flex;
+    justify-content: space-between;
 
+    @media (max-width: 750px) {
+      display: block;
+    }
+  }
   &__logo {
     background-image: url("../img/logo.svg");
     background-repeat: no-repeat;
@@ -79,6 +113,11 @@ header {
     display: flex;
     text-align: center;
     margin: 0;
+    @media (max-width: 750px) {
+      justify-content: left;
+      flex-direction: column;
+      text-align: left;
+    }
 
     &-item {
       padding: 0 0 0 36px;
@@ -101,6 +140,7 @@ header {
     }
 
     &-btn {
+
       margin-top: -5px;
       font-weight: 600;
       font-size: 0.75rem;
@@ -108,7 +148,10 @@ header {
       /* identical to box height, or 160% */
       text-align: center;
       text-transform: uppercase;
-
+      @media (max-width: 750px) {
+        margin-top: 5px;
+        margin-left: -30px;
+      }
       a {
         color: #250F8A;
       }
@@ -116,10 +159,60 @@ header {
   }
 
   &__authorization {
+    position: relative;
     & > .navbar__list {
       a {
         opacity: unset;
       }
+    }
+    @media (max-width: 750px) {
+      &::before{
+        content: '';
+        width: 100px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 30px;
+      }
+    }
+  }
+
+  @media (min-width: 751px) {
+    .menu-close, .menu-triger {
+      display: none;
+    }
+  }
+  @media (max-width: 750px) {
+    .menu-triger {
+      color: #fff;
+      font-size: 1.3rem;
+      display: block;
+      position: absolute;
+      right: 50px;
+      top: 23px;
+    }
+    .menu-close {
+      color: #fff;
+      font-size: 1.5rem;
+      display: block;
+      position: absolute;
+      right: 50px;
+      top: 20px;
+      z-index: 100;
+    }
+    .menu-popup {
+      display: none;
+      background-color: #2D2193;
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      top: 0;
+      padding: 30px;
+      z-index: 9999;
+    }
+    .body_pointer * {
+      cursor: pointer;
     }
   }
 }
@@ -134,6 +227,13 @@ header {
   @media (min-width: 1400px) {
     padding: 100px 0 150px 0;
   }
+  @media (max-width: 900px) {
+    padding: 100px 0 170px 0;
+  }
+  @media (max-width: 500px) {
+    padding: 70px 0 150px 0;
+  }
+
   &__content {
     //display: block;
     text-align: left;
@@ -193,6 +293,9 @@ header {
       position: absolute;
       bottom: -130px;
       left: 0;
+      @media (max-width: 1250px) {
+        display: none;
+      }
     }
   }
 
@@ -208,8 +311,13 @@ header {
   &-box {
     display: flex;
     justify-content: space-between;
+    @media (max-width: 850px) {
+      flex-direction: column;
+    }
 
     &__item {
+      flex-basis: 32%;
+
       &-title {
         margin: 0;
         font-weight: bold;
@@ -238,6 +346,9 @@ header {
 
 #about {
   background: url("../img/figure1-reverse.svg") right 50% no-repeat;
+  @media (max-width: 1250px) {
+    background-image: none;
+  }
   background-color: #F4F9FD;
 }
 
@@ -247,11 +358,18 @@ header {
     position: relative;
     display: flex;
     justify-content: space-between;
+    @media (max-width: 850px) {
+      flex-direction: column;
+    }
 
     &-content {
       padding: 115px 0;
       position: relative;
       flex-basis: 40%;
+      @media (max-width: 850px) {
+        padding: 0 0 20px 0;
+        flex-basis: 100%;
+      }
 
       &-img {
         position: absolute;
@@ -266,6 +384,9 @@ header {
       font-weight: bold;
       font-size: 1.75rem;
       line-height: 2.25rem;
+      @media (max-width: 850px) {
+        text-align: center;
+      }
     }
 
     &-desc {
@@ -279,15 +400,37 @@ header {
       //background: url("../img/about1.svg") 0 0 no-repeat;
       position: absolute;
       right: -180px;
+      @media (max-width: 850px) {
+        position: relative;
+        right: unset;
+        margin: 0 auto;
+      }
+
+      img {
+        @media (max-width: 850px) {
+          width: 100%;
+          max-width: 300px;
+        }
+
+      }
 
       &_left {
         right: unset;
         left: -200px;
+        @media (max-width: 850px) {
+          display: none;
+        }
       }
     }
 
     &_reverse {
       flex-direction: row-reverse;
+
+      &-md {
+        @media (max-width: 850px) {
+          flex-direction: column-reverse;
+        }
+      }
     }
   }
 }
@@ -315,6 +458,9 @@ header {
   &-box {
     display: flex;
     justify-content: space-between;
+    @media (max-width: 650px) {
+      flex-direction: column;
+    }
 
     &__item {
       background: rgba(255, 255, 255, 0.2);
@@ -322,12 +468,20 @@ header {
       padding: 30px 0 10px 0;
       border-radius: 5px;
       flex-basis: 32%;
+      @media (max-width: 650px) {
+        flex-basis: auto;
+        margin: 20px 0;
+      }
     }
 
     &__header {
       display: flex;
       padding: 0 20px;
       text-align: left;
+      @media (max-width: 650px) {
+        justify-content: center;
+
+      }
     }
 
     &__img {
@@ -401,14 +555,104 @@ header {
   justify-content: space-between;
   font-size: 0.75rem;
   line-height: 1.2rem;
+  @media (max-width: 500px) {
+    flex-direction: column;
+    text-align: center;
+  }
 
   &-list {
     list-style-type: none;
     display: flex;
+    @media (max-width: 500px) {
+      justify-content: space-between;
+    }
 
     &__item {
       margin-right: 50px;
+      a{
+        color: #202020;
+      }
+    }
+  }
+}
 
+#myModal {
+  width: 100%;
+  max-width: 400px;
+  height: 390px;
+  padding: 18px 9px;
+  border-radius: 4px;
+  background: #289BCC;
+  color: #fff;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  margin: auto;
+  display: none;
+  opacity: 0;
+  z-index: 38;
+  text-align: center;
+  @media (max-width: 650px) {
+    max-width: 90%;
+  }
+  &__close {
+    width: 21px; height: 21px;
+    position: absolute;
+    top: 1px;   right: 11px;
+    cursor: pointer;
+    display: block;
+    font-size: 29px;
+  }
+}
+#myOverlay {
+  z-index: 37;
+  position: fixed;
+  background-color: rgba(0,0,0,.7);
+  width: 100%; height: 100%;
+  top: 0; left: 0;
+  cursor :pointer;
+  display :none;
+}
+.sing-up{
+  text-align: left;
+  padding: 10px;
+
+}
+.modal{
+  &__group{
+    padding: 10px 0;
+    //display: flex;
+    justify-content: space-between;
+  }
+  &__label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+  &__input{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 90%;
+    height: 25px;
+
+  }
+  &__btn{
+    margin: 20px auto;
+    //background-color: ;
+    border: none;
+    padding: 10px 35px;
+    background: #FFCA00;
+    box-shadow: 0 20px 30px rgba(37, 15, 138, 0.2);
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    letter-spacing: 0.6px;
+    color: #070e63;
+    text-transform: uppercase;
+    &:focus{
+      outline: none;
     }
   }
 }
