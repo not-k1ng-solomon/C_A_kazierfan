@@ -205,8 +205,8 @@ header {
       display: none;
       background-color: #2D2193;
       position: absolute;
-      left: 0px;
-      right: 0px;
+      left: 0;
+      right: 0;
       top: 0;
       padding: 30px;
       z-index: 9999;
@@ -615,7 +615,6 @@ header {
 .sing-up{
   text-align: left;
   padding: 10px;
-
 }
 .modal{
   &__group{

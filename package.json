@@ -1,5 +1,5 @@
 {
-  "name": "tp-layout-course",
+  "name": "c_a_kazierfan",
   "version": "1.0.0",
   "description": "Useinov Shevket",
   "main": "index.js",
@@ -25,6 +25,14 @@
     "sass": "^1.26.10",
     "slick-carousel": "^1.8.1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Shevket Useinon",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/not-k1ng-solomon/C_A_kazierfan.git"
+  },
+  "bugs": {
+    "url": "https://github.com/not-k1ng-solomon/C_A_kazierfan/issues"
+  },
+  "homepage": "https://github.com/not-k1ng-solomon/C_A_kazierfan#readme"
 }
