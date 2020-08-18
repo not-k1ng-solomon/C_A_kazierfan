@@ -1,8 +1,5 @@
 $("body").css("overflow-x", "hidden");
-$('#nextContent').click(()=>{
-    $('#nextContentList').fadeIn();
-    $('#nextContent').hide();
-});
+
 $(() =>{
 
     var $menu_popup = $('.menu-popup');

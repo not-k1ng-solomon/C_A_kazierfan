@@ -30,7 +30,7 @@ a {
 }
 
 .wrap {
-  max-width: 960px;
+  max-width: 990px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -88,9 +88,10 @@ header {
   .menu-popup{
     display: flex;
     justify-content: space-between;
-
+    flex-basis: 70%;
     @media (max-width: 750px) {
       display: block;
+      flex-basis: unset;
     }
   }
   &__logo {
